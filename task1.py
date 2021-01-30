@@ -74,12 +74,14 @@ elif expenses == income:
      
 # задание 6 
 
-day1_a = float(input('Пробежал в 1-й день, км:')) 
-desired_b = float(input('Надо, км :'))
-final = day1_a + day1_a*(0.1*x)          
+day1 = float(input('Пробежал в 1-й день, км:')) 
+desired = float(input('Надо, км :'))
+x = 1 
+final = day1
 
-while final <= desired_b:
-    x = x + 1
-    final = day1_a + (day1_a*(0.1*x))
+while final < desired:
+       final *= 1.1  
+       x += 1
+       #print ((x), round(final,2))
 print ('бежал {} дней'.format(x))
     
